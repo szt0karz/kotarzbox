@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="light" data-lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Polityka Prywatności – KotarzBox</title>
+  <link rel="icon" type="image/png" href="images/logo_s.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Polityka prywatności KotarzBox – informacje o przetwarzaniu danych osobowych, plikach cookie i Instagramie." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg:          #F7F4EF;
+      --bg-warm:     #EDE8DF;
+      --bg-card:     #FFFFFF;
+      --ink:         #1C1612;
+      --ink-muted:   #7A6F63;
+      --ink-ghost:   #C2B9AD;
+      --amber:       #C8873A;
+      --amber-light: #F0C07A;
+      --amber-pale:  #F9EDD8;
+      --amber-deep:  #8A5A1E;
+      --green:       #2D7A4F;
+      --border:      rgba(28,22,18,.09);
+      --border-mid:  rgba(28,22,18,.18);
+      --sh-sm:  0 4px 20px rgba(28,22,18,.07);
+      --sh-md:  0 12px 48px rgba(28,22,18,.10);
+      --r-sm: 12px; --r-md: 18px; --r-lg: 28px; --r-xl: 40px; --r-pill: 999px;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-ui:      'Syne', system-ui, sans-serif;
+      --font-mono:    'DM Mono', monospace;
+      --ease-out:     cubic-bezier(.16,1,.3,1);
+      --max: 860px;
+      --nav-bg:       rgba(247,244,239,.96);
+      --footer-bg:    #0A0805;
+      --tt: background 0.45s ease, color 0.45s ease, border-color 0.45s ease;
+    }
+
+    [data-theme="dark"] {
+      --bg:          #0E0C09;
+      --bg-warm:     #181410;
+      --bg-card:     #1C1814;
+      --ink:         #F0EBE3;
+      --ink-muted:   #9A8E82;
+      --ink-ghost:   #4A4038;
+      --amber:       #D4924A;
+      --amber-light: #F0C07A;
+      --amber-pale:  #2A1E0D;
+      --amber-deep:  #F0C07A;
+      --green:       #4AAF72;
+      --border:      rgba(240,235,227,.07);
+      --border-mid:  rgba(240,235,227,.13);
+      --sh-sm:  0 4px 20px rgba(0,0,0,.35);
+      --sh-md:  0 12px 48px rgba(0,0,0,.45);
+      --nav-bg:       rgba(14,12,9,.96);
+      --footer-bg:    #050403;
+    }
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{
+      font-family:var(--font-ui);
+      background:var(--bg);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+      overflow-x:hidden;
+      transition:var(--tt);
+    }
+    a{color:var(--amber-deep);text-decoration:underline;text-underline-offset:3px}
+    a:hover{color:var(--amber)}
+    img{max-width:100%;display:block}
+    button{font-family:inherit;cursor:pointer;border:none;background:none}
+
+    /* ─── NAV ─── */
+    .nav{
+      position:sticky;top:0;z-index:200;
+      backdrop-filter:blur(48px) saturate(220%);
+      -webkit-backdrop-filter:blur(48px) saturate(220%);
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--border);
+      transition:var(--tt);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:1.5rem;padding:.85rem 0;
+      width:100%;max-width:var(--max);margin:0 auto;padding-left:2rem;padding-right:2rem;
+    }
+    .nav-brand{display:flex;align-items:center;gap:.9rem;text-decoration:none;color:inherit}
+    .nav-logo{width:40px;height:40px;border-radius:12px;background:var(--bg-card);border:1.5px solid var(--border-mid);overflow:hidden;box-shadow:3px 3px 0 var(--ink);flex-shrink:0}
+    .nav-logo img{width:100%;height:100%;object-fit:cover}
+    .nav-name{font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--ink)}
+    .nav-tag{font-size:.62rem;color:var(--ink-muted);letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-mono)}
+    .nav-actions{display:flex;align-items:center;gap:.6rem}
+
+    .lang-switcher{display:flex;align-items:center;background:var(--bg-warm);border:1.5px solid var(--border-mid);border-radius:var(--r-pill);padding:3px;gap:2px}
+    .lang-btn{padding:.25rem .65rem;border-radius:var(--r-pill);font-size:.7rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-family:var(--font-mono);color:var(--ink-muted);background:transparent;transition:all .25s;display:flex;align-items:center;gap:.25rem;text-decoration:none}
+    .lang-btn.active{background:var(--ink);color:var(--bg);box-shadow:0 2px 10px rgba(28,22,18,.2)}
+    .lang-flag{font-size:.8rem}
+
+    .theme-toggle{width:36px;height:36px;border-radius:10px;border:1.5px solid var(--border-mid);background:var(--bg-card);color:var(--ink-muted);display:flex;align-items:center;justify-content:center;transition:all .3s;position:relative;overflow:hidden;flex-shrink:0}
+    .theme-toggle:hover{border-color:var(--amber);color:var(--amber);transform:rotate(15deg)}
+    .theme-toggle .icon-sun,.theme-toggle .icon-moon{position:absolute;transition:transform .4s,opacity .3s;font-size:.85rem}
+    [data-theme="light"] .icon-sun{opacity:1;transform:rotate(0) scale(1)}
+    [data-theme="light"] .icon-moon{opacity:0;transform:rotate(90deg) scale(.5)}
+    [data-theme="dark"] .icon-sun{opacity:0;transform:rotate(-90deg) scale(.5)}
+    [data-theme="dark"] .icon-moon{opacity:1;transform:rotate(0) scale(1)}
+
+    .btn-back{
+      display:inline-flex;align-items:center;gap:.4rem;
+      padding:.45rem 1.1rem;border-radius:var(--r-pill);
+      background:transparent;border:1.5px solid var(--border-mid);
+      color:var(--ink-muted);font-size:.75rem;font-weight:600;letter-spacing:.04em;
+      text-decoration:none;transition:all .2s;
+    }
+    .btn-back:hover{border-color:var(--ink);color:var(--ink);transform:translateX(-2px)}
+
+    /* ─── HERO ─── */
+    .pp-hero{
+      padding:4rem 0 3rem;
+      border-bottom:1px solid var(--border);
+      position:relative;overflow:hidden;
+    }
+    .pp-hero::before{
+      content:'';position:absolute;top:-60px;right:-100px;
+      width:400px;height:400px;border-radius:50%;
+      background:radial-gradient(circle,rgba(200,135,58,.10) 0%,transparent 65%);
+      pointer-events:none;
+    }
+    .pp-hero-inner{max-width:var(--max);margin:0 auto;padding:0 2rem}
+    .pp-badge{
+      display:inline-flex;align-items:center;gap:.5rem;
+      font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--amber-deep);padding:.28rem .85rem;border-radius:var(--r-pill);
+      background:var(--amber-pale);border:1px solid rgba(200,135,58,.35);
+      font-family:var(--font-mono);margin-bottom:1.2rem;text-decoration:none;
+    }
+    .pp-title{
+      font-family:var(--font-display);
+      font-size:clamp(2.4rem,5vw,3.8rem);
+      font-weight:700;letter-spacing:-.03em;
+      line-height:1.05;color:var(--ink);margin-bottom:.9rem;
+    }
+    .pp-title em{color:var(--amber);font-style:italic}
+    .pp-subtitle{font-size:.94rem;color:var(--ink-muted);line-height:1.75;max-width:36rem}
+    .pp-meta{
+      display:flex;align-items:center;gap:1.5rem;
+      margin-top:1.6rem;flex-wrap:wrap;
+    }
+    .pp-meta-item{
+      display:flex;align-items:center;gap:.45rem;
+      font-size:.78rem;color:var(--ink-ghost);font-family:var(--font-mono);
+    }
+    .pp-meta-item i{color:var(--amber)}
+
+    /* ─── TOC ─── */
+    .pp-toc{
+      background:var(--bg-card);border:1.5px solid var(--border);
+      border-radius:var(--r-xl);padding:1.8rem 2rem;
+      margin:2.5rem 0;box-shadow:var(--sh-sm);
+      position:relative;overflow:hidden;
+    }
+    .pp-toc::before{
+      content:'';position:absolute;top:0;left:0;right:0;height:3px;
+      background:linear-gradient(90deg,var(--amber-deep),var(--amber),var(--amber-light));
+    }
+    .pp-toc-title{
+      font-family:var(--font-display);font-size:1rem;font-weight:700;
+      color:var(--ink);margin-bottom:1rem;
+      display:flex;align-items:center;gap:.5rem;
+    }
+    .pp-toc-title i{color:var(--amber);font-size:.85rem}
+    .pp-toc ol{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.35rem .8rem}
+    .pp-toc ol li a{
+      font-size:.8rem;color:var(--ink-muted);text-decoration:none;
+      display:flex;align-items:center;gap:.35rem;
+      padding:.2rem 0;border-bottom:1px solid transparent;
+      transition:all .18s;font-family:var(--font-mono);
+    }
+    .pp-toc ol li a:hover{color:var(--amber-deep);border-bottom-color:var(--amber)}
+    .pp-toc ol li a::before{
+      content:attr(data-num);
+      font-size:.65rem;width:18px;height:18px;border-radius:50%;
+      background:var(--amber-pale);color:var(--amber-deep);
+      display:flex;align-items:center;justify-content:center;
+      flex-shrink:0;font-weight:700;
+    }
+
+    /* ─── MAIN CONTENT ─── */
+    .pp-content{
+      max-width:var(--max);margin:0 auto;
+      padding:0 2rem 5rem;
+    }
+    .pp-section{
+      margin-bottom:3.5rem;
+      scroll-margin-top:90px;
+    }
+    .pp-section-header{
+      display:flex;align-items:flex-start;gap:1rem;
+      margin-bottom:1.4rem;padding-bottom:1rem;
+      border-bottom:1.5px solid var(--border);
+    }
+    .pp-section-num{
+      width:36px;height:36px;border-radius:10px;flex-shrink:0;margin-top:2px;
+      background:linear-gradient(135deg,var(--amber),var(--amber-deep));
+      display:flex;align-items:center;justify-content:center;
+      font-family:var(--font-mono);font-size:.78rem;font-weight:700;color:#fff;
+    }
+    .pp-section-title{
+      font-family:var(--font-display);
+      font-size:1.5rem;font-weight:700;line-height:1.2;color:var(--ink);
+      letter-spacing:-.02em;
+    }
+    .pp-section-title small{
+      display:block;font-size:.75rem;color:var(--ink-muted);
+      font-family:var(--font-mono);font-weight:400;letter-spacing:.04em;margin-top:.1rem;
+    }
+
+    .pp-section p{
+      font-size:.9rem;color:var(--ink-muted);
+      line-height:1.82;margin-bottom:1rem;
+    }
+    .pp-section p strong{color:var(--ink);font-weight:700}
+    .pp-section ul{margin:.8rem 0 1rem 0;padding-left:0;list-style:none;display:flex;flex-direction:column;gap:.5rem;}
+    .pp-section ul li{font-size:.88rem;color:var(--ink-muted);line-height:1.75;display:flex;align-items:flex-start;gap:.65rem;}
+    .pp-section ul li::before{content:'🐾';font-size:.7rem;margin-top:.3rem;flex-shrink:0;}
+
+    /* ─── COOKIE TABLE ─── */
+    .pp-table-wrap{overflow-x:auto;margin:1.2rem 0;border-radius:var(--r-md);border:1.5px solid var(--border)}
+    .pp-table{width:100%;border-collapse:collapse;font-size:.82rem}
+    .pp-table thead{background:var(--bg-warm)}
+    .pp-table th{padding:.75rem 1rem;text-align:left;font-weight:700;color:var(--ink);font-family:var(--font-mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;border-bottom:1.5px solid var(--border-mid)}
+    .pp-table td{padding:.7rem 1rem;color:var(--ink-muted);border-bottom:1px solid var(--border);line-height:1.55}
+    .pp-table tr:hover td{background:var(--bg-warm)}
+    .tag{display:inline-block;font-size:.65rem;padding:.1rem .5rem;border-radius:var(--r-pill);font-family:var(--font-mono);font-weight:600}
+    .tag-essential{background:rgba(45,122,79,.1);color:#2D7A4F}
+    .tag-analytics{background:rgba(66,133,244,.1);color:#4285F4}
+
+    /* ─── CONTACT BOX ─── */
+    .pp-contact-box{
+      background:var(--ink);color:#fff;
+      border-radius:var(--r-xl);padding:2.2rem;
+      text-align:center;margin-top:2.5rem;
+    }
+    [data-theme="dark"] .pp-contact-box{background:#1A1612;border:1px solid var(--border-mid)}
+    .pp-contact-box h3{font-family:var(--font-display);font-size:1.6rem;font-style:italic;color:#fff;margin-bottom:.55rem;}
+    .pp-contact-box p{font-size:.87rem;color:rgba(255,255,255,.5);margin-bottom:1.4rem;line-height:1.7;}
+    .pp-contact-links{display:flex;justify-content:center;gap:.8rem;flex-wrap:wrap}
+    .pp-contact-link{display:inline-flex;align-items:center;gap:.5rem;padding:.65rem 1.4rem;border-radius:var(--r-pill);font-size:.8rem;font-weight:700;text-decoration:none;transition:all .22s;}
+    .pp-contact-link.amber{background:var(--amber);color:#fff;}
+    .pp-contact-link.amber:hover{background:var(--amber-deep);transform:translateY(-2px)}
+
+    .pp-divider{height:1px;background:linear-gradient(to right,transparent,var(--border-mid),transparent);margin:2.5rem 0}
+
+    /* ─── FOOTER ─── */
+    .pp-footer{background:var(--footer-bg);color:rgba(255,255,255,.32);padding:1.8rem 0;}
+    .pp-footer-inner{max-width:var(--max);margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+    .pp-footer-brand{display:flex;align-items:center;gap:.5rem;font-size:.82rem;text-decoration:none;color:rgba(255,255,255,.32)}
+    .pp-footer-logo{width:24px;height:24px;border-radius:6px;background:var(--amber-pale);overflow:hidden;flex-shrink:0}
+
+    /* ─── LANG CONTROL ─── */
+    [data-lang="pl"] .en-text, [data-lang="pl"] .pp-toc-en {display:none}
+    [data-lang="en"] .pl-text, [data-lang="en"] .pp-toc-pl {display:none}
+
+    .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+    .reveal.visible{opacity:1;transform:none}
+
+    @media(max-width:640px){
+      .pp-toc ol{grid-template-columns:1fr}
+      .pp-footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo"><img src="images/logo_s.svg" alt="KotarzBox" /></div>
+      <div>
+        <div class="nav-name">KotarzBox</div>
+        <div class="nav-tag pl-text">Strony internetowe</div>
+        <div class="nav-tag en-text">Web Design Studio</div>
+      </div>
+    </a>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btnPL" onclick="setLang('pl')"><span class="lang-flag">🇵🇱</span> PL</button>
+        <button class="lang-btn" id="btnEN" onclick="setLang('en')"><span class="lang-flag">🇬🇧</span> EN</button>
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun icon-sun"></i>
+        <i class="fa-solid fa-moon icon-moon"></i>
+      </button>
+      <a href="index.html" class="btn-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span class="pl-text">Powrót</span>
+        <span class="en-text">Back</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="pp-hero">
+  <div class="pp-hero-inner">
+    <div class="pp-badge">🔒 <span class="pl-text">Polityka Prywatności</span><span class="en-text">Privacy Policy</span></div>
+    <h1 class="pp-title">
+      <span class="pl-text">Twoje dane są<br><em>bezpieczne</em> u kotka</span>
+      <span class="en-text">Your data is<br><em>safe</em> with the cat</span>
+    </h1>
+    <p class="pp-subtitle">
+      <span class="pl-text">Dbamy o Twoją prywatność tak samo, jak dbamy o każdy piksel naszych stron. Przeczytaj, jak przetwarzamy dane i korzystamy z plików cookie.</span>
+      <span class="en-text">We care about your privacy just as much as every pixel of our websites. Read how we process data and use cookies.</span>
+    </p>
+    <div class="pp-meta">
+      <div class="pp-meta-item"><i class="fa-solid fa-calendar"></i> <span class="pl-text">Aktualizacja: 1 kwietnia 2026</span><span class="en-text">Updated: April 1, 2026</span></div>
+      <div class="pp-meta-item"><i class="fa-solid fa-location-dot"></i> <span>KotarzBox, Ruda Śląska</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="pp-content">
+  <div class="pp-toc reveal">
+    <div class="pp-toc-title"><i class="fa-solid fa-list"></i> <span class="pl-text">Spis treści</span><span class="en-text">Table of Contents</span></div>
+    <ol class="pp-toc-pl">
+      <li><a href="#s1" data-num="1">Administrator danych</a></li>
+      <li><a href="#s2" data-num="2">Jakie dane zbieramy</a></li>
+      <li><a href="#s3" data-num="3">Cel i podstawa prawna</a></li>
+      <li><a href="#s4" data-num="4">Pliki cookie</a></li>
+      <li><a href="#s9" data-num="9">Twoje prawa</a></li>
+      <li><a href="#s12" data-num="12">Kontakt</a></li>
+    </ol>
+    <ol class="pp-toc-en">
+      <li><a href="#s1" data-num="1">Data Controller</a></li>
+      <li><a href="#s2" data-num="2">Data we collect</a></li>
+      <li><a href="#s3" data-num="3">Purpose & Legal Basis</a></li>
+      <li><a href="#s4" data-num="4">Cookies</a></li>
+      <li><a href="#s9" data-num="9">Your Rights</a></li>
+      <li><a href="#s12" data-num="12">Contact</a></li>
+    </ol>
+  </div>
+
+  <div class="pp-section reveal" id="s1">
+    <div class="pp-section-header">
+      <div class="pp-section-num">1</div>
+      <div class="pp-section-title">
+        <span class="pl-text">Administrator danych</span><span class="en-text">Data Controller</span>
+        <small>RODO Art. 13</small>
+      </div>
+    </div>
+    <p class="pl-text">Administratorem danych jest KotarzBox z siedzibą w Rudzie Śląskiej.</p>
+    <p class="en-text">The data controller is KotarzBox based in Ruda Śląska, Poland.</p>
+  </div>
+
+  <div class="pp-section reveal" id="s2">
+    <div class="pp-section-header">
+      <div class="pp-section-num">2</div>
+      <div class="pp-section-title">
+        <span class="pl-text">Jakie dane zbieramy</span><span class="en-text">What data we collect</span>
+      </div>
+    </div>
+    <ul>
+      <li class="pl-text">Imię i adres e-mail (formularz kontaktowy).</li>
+      <li class="en-text">Name and email address (contact form).</li>
+      <li class="pl-text">Dane techniczne (IP, przeglądarka).</li>
+      <li class="en-text">Technical data (IP, browser).</li>
+    </ul>
+  </div>
+
+  <div class="pp-section reveal" id="s3">
+    <div class="pp-section-header">
+      <div class="pp-section-num">3</div>
+      <div class="pp-section-title">
+        <span class="pl-text">Cel i podstawa prawna</span><span class="en-text">Purpose & Legal Basis</span>
+        <small>Art. 6 ust. 1 RODO</small>
+      </div>
+    </div>
+    <p class="pl-text">Twoje dane przetwarzamy w celu odpowiedzi na zapytania (prawnie uzasadniony interes) oraz realizacji umów.</p>
+    <p class="en-text">We process your data to respond to inquiries (legitimate interest) and to perform contracts.</p>
+  </div>
+
+  <div class="pp-section reveal" id="s4">
+    <div class="pp-section-header">
+      <div class="pp-section-num">4</div>
+      <div class="pp-section-title">
+        <span class="pl-text">Pliki cookie (Ciasteczka)</span><span class="en-text">Cookies</span>
+      </div>
+    </div>
+    <div class="pp-table-wrap">
+      <table class="pp-table">
+        <thead>
+          <tr><th>Nazwa</th><th>Cel</th><th>Typ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>__gtag</td><td class="pl-text">Analityka Google</td><td class="en-text">Google Analytics</td><td><span class="tag tag-analytics">Analytics</span></td></tr>
+          <tr><td>theme-mode</td><td class="pl-text">Preferencje wyglądu</td><td class="en-text">UI Preferences</td><td><span class="tag tag-essential">Essential</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="pp-section reveal" id="s9">
+    <div class="pp-section-header">
+      <div class="pp-section-num">5</div>
+      <div class="pp-section-title">
+        <span class="pl-text">Twoje prawa</span><span class="en-text">Your Rights</span>
+      </div>
+    </div>
+    <p class="pl-text">Masz prawo do dostępu do danych, ich sprostowania, usunięcia ("prawo do bycia zapomnianym") oraz sprzeciwu.</p>
+    <p class="en-text">You have the right to access, rectify, delete ("right to be forgotten") and object to data processing.</p>
+  </div>
+
+  <div class="pp-contact-box reveal" id="s12">
+    <h3><span class="pl-text">Masz pytania?</span><span class="en-text">Have questions?</span></h3>
+    <p><span class="pl-text">Napisz do nas, chętnie wyjaśnimy wszelkie zawiłości dotyczące Twoich danych.</span>
+       <span class="en-text">Write to us, we will be happy to explain any complexities regarding your data.</span></p>
+    <div class="pp-contact-links">
+      <a href="mailto:kotarzbox@outlook.com" class="pp-contact-link amber">
+        <i class="fa-solid fa-envelope"></i> kotarzbox@outlook.com
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="pp-footer">
+  <div class="pp-footer-inner">
+    <a href="index.html" class="pp-footer-brand">
+      <div class="pp-footer-logo"><img src="images/logo_s.svg" alt="KotarzBox"></div>
+      <span>© 2026 KotarzBox.</span>
+    </a>
+    <div class="pp-footer-links">
+      <a href="index.html" class="pl-text">Strona główna</a>
+      <a href="index.html" class="en-text">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Theme Toggle
+  function toggleTheme() {
+    const html = document.documentElement;
+    const current = html.getAttribute('data-theme');
+    const target = current === 'light' ? 'dark' : 'light';
+    html.setAttribute('data-theme', target);
+    localStorage.setItem('kotarz-theme', target);
+  }
+
+  // Lang Switcher
+  function setLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(lang === 'pl' ? 'btnPL' : 'btnEN').classList.add('active');
+    localStorage.setItem('kotarz-lang', lang);
+  }
+
+  // Scroll Reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Init
+  window.onload = () => {
+    const savedTheme = localStorage.getItem('kotarz-theme') || 'light';
+    const savedLang = localStorage.getItem('kotarz-lang') || 'pl';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    setLang(savedLang);
+  };
+</script>
+
+</body>
+</html>
